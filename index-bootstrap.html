@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <main class="container-fluid" style="background-color: rgba(0, 0, 0, 0.3)">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+
+                <a class="navbar-brand" href="index.html">Home</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav float-end  d-flex me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index-bootstrap.html">Bootstrap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index-materialize.html">Materialize</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br>
+
+        <div class="row" style="background-image: url(table-mountain2.jpg); background-size: cover">
+            <div class="col-md">
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <h1>{{user.fullName}}</h1>
+
+            </div>
+
+            <div class="col-md">
+
+                <img src={{user.photo}} class="img-fluid" class="rounded mx-auto d-block" alt="my picture">
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="row">
+            <br>
+            <div class="col-md">
+                <h2>{{city.name}}</h2>
+                <img src={{city.photo}} class="img-fluid" alt="...">
+            </div>
+            <br>
+            <div class="col-md">
+                <br>
+                <br>
+
+                <p style="font-family: Arial, sans-serif;">
+                    {{city.description}}
+                </p>
+                <br>
+                <br>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <h2>{{foreignlanguage.language}}</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+
+                            <th scope="col">English</th>
+                            <th scope="col">German</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each foreignLanguage.phrases}}
+                        <tr>
+
+                            <td>{{englishPhrase}}</td>
+                            <td>{{foreignLanguage}}</td>
+
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            {{#each favouriteSubjects}}
+            <div class="col-md">
+                <h2>{{name}}</h2>
+                <img src="{{description}}" class="img-fluid" alt="...">
+            </div>
+            {{/each}}
+        </div>
+
+    </main>
+    <footer>
+        <div class="text-center">
+            <br>
+            <h6>Ntebele Mahamo</h6>
+            <h6>@2023</h6>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

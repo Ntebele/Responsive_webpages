@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+<main>
+    
+    <nav class="#33383a teal darken-4">
+        <div class="nav-wrapper container">
+          <a href="/index.html" class="brand-logo left">Home</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/index-bootstrap.html">Bootstrap</a></li>
+            <li><a href="index-materialize.html">Materialize</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <br>
+    <div class="container">
+
+    <div class="row">
+        <div class="col s12 m12 16">
+            
+            <h1>{{user.fullName}}</h1>
+
+        </div>
+
+        <div class="col s12 m12 16">
+     
+            <img src={{user.photo}} class="img-fluid" class="rounded mx-auto d-block" alt="...">
+       
+        </div>
+    </div>
+
+    <hr>
+   <section>
+    <div class="row">
+        <br>
+        <div class="col s12 m12 16">
+            <h2>{{city.name}}</h2>
+            <img src={{city.photo}} class="img-fluid" alt="...">
+        </div>
+        <br>
+        <div class="col s12 m12 16">
+            <br>
+            <br>
+            <br>
+            <br>
+            <p style="font-family: Arial, sans-serif;">
+                {{city.description}}
+            </p>
+            <br>
+            <br>
+        </div>
+
+
+    </div>
+</section>
+
+    <div class="row">
+        <div class="col s12 m12 16">
+            <h2>{{foreignlanguage.language}}</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th scope="col">English</th>
+                        <th scope="col">German</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each foreignLanguage.phrases}}
+                    <tr>
+
+                        <td>{{englishPhrase}}</td>
+                        <td>{{foreignLanguage}}</td>
+
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        {{#each favouriteSubjects}}
+        <div class="col s12 m12 16">
+            <h2>{{name}}</h2>
+
+        <div class="col s12 m12 16">
+            <img src="{{description}}" class="img-fluid" alt="...">
+          </div>
+        </div>
+        {{/each}}
+    </div>
+
+
+</div>
+</main>
+<footer>
+    <div  class="center-align #33383a teal darken-4" style="color: white">
+        <br>
+        <h6>Ntebele Mahamo</h6>
+        <h7>@2023</h7>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
+</body>
+
+</html>
