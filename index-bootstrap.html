@@ -48,13 +48,13 @@
                 <br>
                 <br>
 
-                <h1>{{user.fullName}}</h1>
+                <h1>{{data.user.fullName}}</h1>
 
             </div>
 
             <div class="col-md">
 
-                <img src={{user.photo}} class="img-fluid" class="rounded mx-auto d-block" alt="my picture">
+                <img src={{data.user.photo}} class="img-fluid" class="rounded mx-auto d-block" alt="">
             </div>
 
         </div>
@@ -64,8 +64,8 @@
         <div class="row">
             <br>
             <div class="col-md">
-                <h2>{{city.name}}</h2>
-                <img src={{city.photo}} class="img-fluid" alt="...">
+                <h2>{{data.city.name}}</h2>
+                <img src={{data.city.photo}} class="img-fluid" alt="...">
             </div>
             <br>
             <div class="col-md">
@@ -73,7 +73,7 @@
                 <br>
 
                 <p style="font-family: Arial, sans-serif;">
-                    {{city.description}}
+                    {{data.city.description}}
                 </p>
                 <br>
                 <br>
@@ -84,7 +84,7 @@
 
         <div class="row">
             <div class="col-md">
-                <h2>{{foreignlanguage.language}}</h2>
+                <h2>{{data.foreignlanguage.language}}</h2>
                 <table class="table">
                     <thead>
                         <tr>
@@ -95,7 +95,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{#each foreignLanguage.phrases}}
+                        {{#each data.foreignLanguage.phrases}}
                         <tr>
 
                             <td>{{englishPhrase}}</td>
@@ -112,9 +112,9 @@
         <br>
         <br>
         <div class="row">
-            {{#each favouriteSubjects}}
+            {{#each data.favouriteSubjects}}
             <div class="col-md">
-                <h2>{{name}}</h2>
+                <h2>{{data.name}}</h2>
                 <img src="{{description}}" class="img-fluid" alt="...">
             </div>
             {{/each}}

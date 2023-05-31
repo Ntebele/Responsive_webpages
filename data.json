@@ -8,6 +8,13 @@
         "photo": "new_york.jpg",
         "description": "New York City is a desirable destination for several reasons. Firstly, it is home to iconic landmarks such as the Statue of Liberty, Times Square, Central Park, Empire State Building, and Brooklyn Bridge, which attract visitors who want to experience these renowned sites firsthand. Secondly, the city's cultural diversity creates a vibrant atmosphere, with diverse neighborhoods like Chinatown, Little Italy, Harlem, and Greenwich Village offering unique experiences and cuisines. Thirdly, Broadway and the performing arts scene in New York City are world-renowned, drawing visitors to enjoy top-notch productions and performances. Additionally, the city is a shopper's paradise, with a wide range of stores, boutiques, and flagship fashionbrands, making it a hub for fashion enthusiasts. New York City also boasts world-class museums and cultural institutions like the Metropolitan Museum of Art,Museum of Modern Art, American Museum of Natural History, and the Guggenheim Museum, housing impressive art collections and educational exhibits. Lastly, the city's energy, fast-paced lifestyle, bustling streets, vibrant nightlife, and endless entertainment options create a sense of excitement that appeals to visitors."
     },
+
+    "academics": {
+        "course": "Civil Engineering BEng",
+        "institution": "University of Johannesburg"
+
+    },
+
     "foreignLanguage": {
         "language": "German",
         "phrases": [
