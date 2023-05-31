@@ -1,6 +1,7 @@
 import handlebars from 'vite-plugin-handlebars';
+import data from "./data.json" assert {type: 'json'};
 import { defineConfig } from 'vite';
-import data from './data.json';
+
 
 export default defineConfig({
     base : '/responsive_webpages/',
