@@ -1,233 +1,118 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-
-
 </head>
 
 <body>
-    
-    <nav class="#33383a teal darken-4">
-        <div class="nav-wrapper container">
-            <a href="index.html" class="brand-logo left">Home</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index-bootstrap.html">Bootstrap</a></li>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo" class="right hide-on-med-and-down" >Home</a>
+            <ul class="right hide-on-med-and-down">
                 <li><a href="index-materialize.html">Materialize</a></li>
+                <li><a href="index-bootstrap.html">Bootstrap</a></li>
             </ul>
         </div>
     </nav>
 
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index-materialize.html">Materialize</a></li>
+    </ul>
 
+    <main class="container-fluid" style="background-color: #eefcce">
+        <br>
 
-
-
-
-    <main class="container">
-
-
-
-
-
-        <div class="row">
-
-
-
-            <div class="col s12 m6">
-
+        <div class="row" style="background-image: url(table_mount.jpeg); background-size: cover">
+            <div class="col m6">
+                <br><br><br>
                 <h1>{{data.user.fullName}}</h1>
-
             </div>
-
-
-
-            <div class=" text-center col s12 m6">
-
-                <img src="{{data.user.photo}}" class="rounded col s12 m8 " alt="...">
-
+            <div class="col m6">
+                <img src={{data.user.photo}} class="responsive-img" alt="">
             </div>
-
         </div>
 
         <br>
 
-        <br>
-
-        <hr>
-
-
-
         <div class="row">
-
-            <h1>{{data.city.name}}</h1>
-
-            <div class="col s12 m6">
-
-
-
-                <img src="{{data.city.photo}}" class="rounded col s12 m10" alt="...">
-
-
-
+            <div class="col m6">
+                <h2>{{data.city.name}}</h2>
+                <img src={{data.city.photo}} class="responsive-img" alt="...">
             </div>
-
-            <div class="col s12 m6">
-
-                <p>
-
+            <div class="col m6">
+                <br><br><br>
+                <p style="font-family: Arial, sans-serif;">
                     {{data.city.description}}
-
                 </p>
-
             </div>
-
         </div>
-
-        <br>
-
-        <br>
-
-        <hr>
-
-
-
-        <div>
-
-            <div>
-
-                <br>
-
-
-
-                <h2>{{data.foreignLanguage.language}}</h2>
-
-                <br>
-
-                <br>
-
-                <hr>
-
-
-
-                <table class="table table-danger">
-
-                    <thead>
-
-                        <tr>
-
-                            <th scope="col">English Phrase</th>
-
-                            <th scope="col">Foreign Phrase</th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-
-
-
-                        {{#each data.foreignLanguage.phrases}}
-
-                        <tr>
-
-                            <td>{{englishPhrase}}</td>
-
-                            <td>{{foreignLanguage}}</td>
-
-                        </tr>
-
-                        {{/each}}
-
-
-
-                    </tbody>
-
-                </table>
-
-
-
-            </div>
-
-            <div>
-
-
-
-            </div>
-
-        </div>
-
-
-
-
-        <br>
-
-        <div class="text-center">
-
-            <h2>{{data.academics.course}}</h2>
-
-            <h3>{{data.academics.institution}}</h3>
-
-            <hr>
-
-            <br>
-
-            <h2>Favourite Subjects</h2>
-
-        </div>
-
-
 
         <div class="row">
-
-            {{#each data.favouriteSubjects}}
-
-
-
-            <div class="col s12 m6">
-
-                <div class="card #757575 grey darken-1">
-
-                    <div class="card-content white-text">
-
-                        <span class="card-title">{{data.name}}</span>
-
-                        <p>{{data.description}}</p>
-
-                    </div>
-
-
-
-                </div>
-
+            <div class="col m12">
+                <br><br>
+                <h2>{{data.foreignlanguage.language}}</h2>
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th>English</th>
+                            <th>German</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each data.foreignLanguage.phrases}}
+                        <tr>
+                            <td>{{englishPhrase}}</td>
+                            <td>{{foreignLanguage}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
             </div>
-
-            {{/each}}
-
         </div>
-
-
 
         <br>
 
-
-
-
-
-
+        <div class="row">
+            <h2>Favourite Subjects</h2>
+            <br>
+            {{#each data.favouriteSubjects}}
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{description}}">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                        <span class="card-title" style="color: black;">{{name}}</span>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
 
     </main>
+<center>
+    <footer id="footer" style="background-color: #00fff714; color: #ffffff;">
+        <div class="text-center">
+            <br>
+            <h6 style="color: black;">Ntebele Mahamo</h6>
+            <h6 style="color: black;">@2023</h6>
+        </div>
+    </footer>
+</center>
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
 </body>
 
 </html>
